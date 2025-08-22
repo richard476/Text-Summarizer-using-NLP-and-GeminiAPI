@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Text Summarizer</title>
+    
+    <!-- External Libraries -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Your Custom CSS -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body class="bg-black">
+
+    <canvas id="bg-canvas"></canvas>
+
+    <main class="w-full">
+        <section id="hero" class="content-section text-center">
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-4">Advanced Text Summarizer</h1>
+            <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto">
+                Can Summarize your Text Data, Take KeyPoints, Bulleted List of Points, Link Extraction, and Ask gemini for Doubts.
+            </p>
+            <p class="mt-8 text-slate-500 animate-bounce">Scroll down to see the Magic🔥</p>
+        </section>
+
+        <section id="summarizer-app" class="content-section">
+            <div class="w-full max-w-4xl mx-auto glass-panel p-8 md:p-12">
+                <h2 class="text-3xl font-bold text-center mb-6 text-white">Enter Your Text or Question</h2>
+                <div class="space-y-6">
+                    <div>
+                        <textarea id="text-input" rows="10" class="w-full p-4 text-slate-200 focus:outline-none"></textarea>
+                    </div>
+                    <div id="button-group" class="flex flex-wrap items-center justify-center gap-4">
+                        <button id="gemini-btn" class="btn btn-primary">
+                           ✨ Summarize
+                        </button>
+                        <button id="bullets-btn" class="btn btn-secondary">
+                           📝 Bulleted List
+                        </button>
+                        <button id="takeaways-btn" class="btn btn-secondary">
+                           🔑 Key Takeaways
+                        </button>
+                        <button id="links-btn" class="btn btn-secondary">
+                           🔗 Link Extractor
+                        </button>
+                        <button id="ask-btn" class="btn btn-secondary">
+                           ❓ Ask Gemini
+                        </button>
+                    </div>
+                    <div>
+                        <label for="summary-output" class="block text-sm font-medium text-slate-400 mb-2">Output:</label>
+                        <div id="summary-container" class="w-full p-4 min-h-[200px] text-slate-200">
+                            <div id="loader" class="hidden mx-auto loader"></div>
+                            <div id="summary-output"></div>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap items-center justify-center gap-4">
+                        <button id="pdf-btn" class="btn btn-secondary" disabled>
+                           📄 Download PDF
+                        </button>
+                         <button id="clear-btn" class="btn btn-secondary">
+                           🗑️ Clear Memory
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Your Custom JavaScript -->
+    <script src="/assets/js/script.js"></script>
+</body>
+</html>
