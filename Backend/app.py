@@ -78,7 +78,7 @@ def handle_gemini_request(prompt_instruction):
     try:
         data = request.get_json()
         text = data.get('text', '')
-        api_key = "AIzaSyC5NEaRBUdYCRgx5ooDniYNDjtfHvivI7I"
+        api_key = "your_API_Key_here"
         if not text: return jsonify({'error': 'No text provided'}), 400
         result = gemini_processor(text, api_key, prompt_instruction)
         return jsonify({'summary': result})
@@ -133,4 +133,3 @@ def generate_pdf():
 
 if __name__ == '__main__':
     app.run(port=5000, debug=True)
-    '''AIzaSyC5NEaRBUdYCRgx5ooDniYNDjtfHvivI7I'''
